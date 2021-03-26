@@ -5,12 +5,23 @@
 	<meta charset="UTF-8">
 	<title>Quản lý lao động</title>
 	<link rel="stylesheet" href="assets/css/normalize.css" />
+	<link rel="stylesheet" href="assets/css/common.css" />
 </head>
 
 <body>
 
+
 	<div id="app">
-		<h1>{{heading}}</h1>
+		<div class="nav-bar">
+			<ul>
+				<li><a v-bind:href="homepage_link">Trang chủ</a></li>
+				<li><a v-bind:href="laodong_link">Lao động</a></li>
+				<li><a :href="chunha_link">Chủ nhà</a></li>
+				<li><a href="/viectet">Việc tết</a></li>
+			</ul>
+		</div>
+		<h1>{{fullTitle}}</h1>
+		<span>{{description}}</span>
 		<p>{{content}}</p>
 	</div>
 
