@@ -59,11 +59,15 @@ header {
 	border: none;
 	border-radius: 50px;
 	cursor: pointer;
-	transition: all 0.3s ease 0s;
+	transition: all 0.5s ease 0s;
 	background-color: rgba(119, 144, 150, 0.7);
 	margin-left: 20px;
 }
 
 .cta button:hover {
 	background-color: rgba(0, 136, 169, 0.8);
+}
+
+.action {
+	margin-left: 50px;
 }
