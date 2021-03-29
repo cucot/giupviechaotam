@@ -4,14 +4,14 @@
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
-	background-color: #24252a;
+	/* background-color:white; */
 }
 
 li, a, button {
 	font-family: "Montserrat", sans-serif;
 	font-weight: 500;
 	font-size: 16px;
-	color: #edf0f1;
+	color: #dfe9ec;
 	text-decoration: none;
 }
 
@@ -20,7 +20,10 @@ header {
 	justify-content: flex-end;
 	align-items: center;
 	padding: 10px 10%;
+	background-color: #204855;
 }
+
+
 
 .logo {
 	width: 50px;
@@ -29,6 +32,7 @@ header {
 
 .nav__links {
 	list-style: none;
+	background-color: #204855;
 }
 
 .nav__links li {

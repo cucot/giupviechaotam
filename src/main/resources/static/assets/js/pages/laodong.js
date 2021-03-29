@@ -33,14 +33,15 @@ $(document).ready(function() {
             {data: 'identityNumber'},           
         ],
         columnDefs: [
-            {
-                targets: [0, 2, 3],
-                sortable: false,
-            },
+            // {
+            //     targets: [0, 2, 3],
+            //     sortable: false,
+            // },
             {
                 targets: 0,
                 title: 'ID',
                 searchable: false,
+                sortable: false,
                 width: '10%',
                 render: function(data) {
                     return data;

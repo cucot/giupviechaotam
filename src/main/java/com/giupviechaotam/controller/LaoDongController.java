@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 public class LaoDongController {
 	
-	@GetMapping("/laodong")
+	@GetMapping("/quan-ly-lao-dong")
 	public String quanLyLaoDong() {
 		return "laodong.html";
 	}
