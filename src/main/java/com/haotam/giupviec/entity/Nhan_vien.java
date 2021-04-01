@@ -1,4 +1,4 @@
-package com.giupviechaotam.entity;
+package com.haotam.giupviec.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

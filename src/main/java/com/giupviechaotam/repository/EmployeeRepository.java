@@ -1,8 +1,0 @@
-package com.giupviechaotam.repository;
-
-import com.giupviechaotam.entity.Employee;
-
-import org.springframework.data.jpa.repository.JpaRepository;
-
-public interface EmployeeRepository extends JpaRepository<Employee, Integer> {   
-}

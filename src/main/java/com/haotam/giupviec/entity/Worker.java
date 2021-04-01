@@ -1,4 +1,4 @@
-package com.giupviechaotam.entity;
+package com.haotam.giupviec.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -9,7 +9,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "LAO_DONG")
-public class Employee {
+public class Worker {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)

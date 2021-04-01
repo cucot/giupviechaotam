@@ -1,9 +1,4 @@
-package com.giupviechaotam.api;
-
-import com.giupviechaotam.api.request.DataTableRequest;
-import com.giupviechaotam.api.response.DataTableResponse;
-import com.giupviechaotam.entity.Employee;
-import com.giupviechaotam.service.EmployeeService;
+package com.haotam.giupviec.api;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -12,17 +7,22 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.haotam.giupviec.api.request.DataTableRequest;
+import com.haotam.giupviec.api.response.DataTableResponse;
+import com.haotam.giupviec.entity.Worker;
+import com.haotam.giupviec.service.WorkerService;
+
 @RestController
 @RequestMapping("/api")
 public class LaoDongAPI {
 
     @Autowired
-    private EmployeeService employeeService;
+    private WorkerService workerService;
     
     @CrossOrigin
     @RequestMapping(path = "/employees", method = RequestMethod.GET)
-    public DataTableResponse<Employee> getAll(@ModelAttribute DataTableRequest dataTableRequest) {
-        return employeeService.getEmployees(dataTableRequest);
+    public DataTableResponse<Worker> getAll(@ModelAttribute DataTableRequest dataTableRequest) {
+        return workerService.getWorkers(dataTableRequest);
     }
 
 }

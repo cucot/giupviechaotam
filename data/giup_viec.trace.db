@@ -3240,3 +3240,12 @@ Caused by: org.h2.jdbc.JdbcSQLInvalidAuthorizationSpecException: Wrong user name
 	at org.h2.message.DbException.getJdbcSQLException(DbException.java:461)
 	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
 	... 56 more
+2021-03-31 22:04:39 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "USERS" not found; SQL statement:
+insert into users (username, password, enabled) values (?,?,?) [42102-200]
+2021-03-31 22:06:07 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "USERS" not found; SQL statement:
+insert into users (username, password, enabled) values (?,?,?) [42102-200]
+2021-03-31 22:09:39 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "AUTHORITIES" not found; SQL statement:
+insert into authorities (username, authority) values (?,?) [42102-200]

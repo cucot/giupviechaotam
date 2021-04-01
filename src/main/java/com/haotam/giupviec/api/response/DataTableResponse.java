@@ -1,4 +1,4 @@
-package com.giupviechaotam.api.response;
+package com.haotam.giupviec.api.response;
 import java.util.List;
 
 public class DataTableResponse<T> {
