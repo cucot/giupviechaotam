@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
 <head>
-    <meta charset="UTF-8">
+	<meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trang chủ - Giúp việc Hảo Tâm</title>
     <link rel="stylesheet" href="assets/css/common.css">
+    <link rel="stylesheet" href="assets/css/normalize.css" />
 </head>
 <body>
-    <header>
+	<header>
         <img src="/assets/image/logo-gvht.png" class="logo">
         <nav>
             <ul class="nav__links">
@@ -24,5 +24,11 @@
             <a class="cta login" href="/login"><button>Login</button></a>
         </div>
     </header>
+    <div class="content" layout:fragment="content">
+    </div>
+    
+    <th:block layout:fragment="scripts">
+    
+    </th:block>
 </body>
 </html>
