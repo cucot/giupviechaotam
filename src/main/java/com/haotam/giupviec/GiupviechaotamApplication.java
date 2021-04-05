@@ -2,6 +2,7 @@ package com.haotam.giupviec;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
@@ -10,9 +11,8 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 public class GiupviechaotamApplication {
 
 	public static void main(String[] args) {
-//		BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
-//		System.out.println(encoder.encode("123456"));
-		SpringApplication.run(GiupviechaotamApplication.class, args);
+		ConfigurableApplicationContext configurableApplicationContext = SpringApplication.run(GiupviechaotamApplication.class, args);
+		Object bean = configurableApplicationContext.getBean("laoDongController");
 	}
 	
 	@Bean

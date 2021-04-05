@@ -7,18 +7,15 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-/**
- * worker là class map tới bảng giúp việc, lưu trữ thông tin các cô giúp việc như họ tên, năm sinh, quê quán, số điện thoại, CMND...
- */
 
 @Entity
-@Table(name = "worker")
-public class Worker {
+@Table(name = "employee")
+public class Employee {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "worker_id")
-	private Long workerId;
+	@Column(name = "employee_id")
+	private Long employeeId;
 	
 	@Column(name = "first_name")
 	private String firstName;
@@ -32,18 +29,15 @@ public class Worker {
 	@Column(name = "phone_number")
 	private String phoneNumber;
 	
-	@Column(name = "address")
-	private String address;
-	
 	@Column(name = "identity_number")
 	private String identityNumber;
 
-	public Long getWorkerId() {
-		return workerId;
+	public Long getEmployeeId() {
+		return employeeId;
 	}
 
-	public void setWorkerId(Long workerId) {
-		this.workerId = workerId;
+	public void setEmployeeId(Long employeeId) {
+		this.employeeId = employeeId;
 	}
 
 	public String getFirstName() {
@@ -78,14 +72,6 @@ public class Worker {
 		this.phoneNumber = phoneNumber;
 	}
 
-	public String getAddress() {
-		return address;
-	}
-
-	public void setAddress(String address) {
-		this.address = address;
-	}
-
 	public String getIdentityNumber() {
 		return identityNumber;
 	}
@@ -93,5 +79,4 @@ public class Worker {
 	public void setIdentityNumber(String identityNumber) {
 		this.identityNumber = identityNumber;
 	}
-	
 }

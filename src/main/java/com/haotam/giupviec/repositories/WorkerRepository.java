@@ -1,4 +1,4 @@
-package com.haotam.giupviec.repository;
+package com.haotam.giupviec.repositories;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 

@@ -12,7 +12,7 @@ import org.springframework.stereotype.Service;
 import com.haotam.giupviec.api.request.DataTableRequest;
 import com.haotam.giupviec.api.response.DataTableResponse;
 import com.haotam.giupviec.entity.Worker;
-import com.haotam.giupviec.repository.WorkerRepository;
+import com.haotam.giupviec.repositories.WorkerRepository;
 
 @Service
 @Transactional
