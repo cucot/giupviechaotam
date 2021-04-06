@@ -11,20 +11,21 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 public class GiupviechaotamApplication {
 
 	public static void main(String[] args) {
-		ConfigurableApplicationContext configurableApplicationContext = SpringApplication.run(GiupviechaotamApplication.class, args);
-		Object bean = configurableApplicationContext.getBean("laoDongController");
+		SpringApplication.run(GiupviechaotamApplication.class, args);
+//		ConfigurableApplicationContext configurableApplicationContext =
+//		Object bean = configurableApplicationContext.getBean("workerController");
 	}
 	
-	@Bean
-	public WebMvcConfigurer corsConfigurer() {
-		return new WebMvcConfigurer() {
-			@Override
-			public void addCorsMappings(CorsRegistry registry) {
-				registry.addMapping("/").allowedOrigins("http://localhost:8080");
-				WebMvcConfigurer.super.addCorsMappings(registry);
-			}
-			
-		};
-	}
+//	@Bean
+//	public WebMvcConfigurer corsConfigurer() {
+//		return new WebMvcConfigurer() {
+//			@Override
+//			public void addCorsMappings(CorsRegistry registry) {
+//				registry.addMapping("/").allowedOrigins("http://localhost:8080");
+//				WebMvcConfigurer.super.addCorsMappings(registry);
+//			}
+//
+//		};
+//	}
 
 }

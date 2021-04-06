@@ -6,6 +6,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import java.util.StringJoiner;
 
 /**
  * worker là class map tới bảng giúp việc, lưu trữ thông tin các cô giúp việc như họ tên, năm sinh, quê quán, số điện thoại, CMND...
@@ -92,6 +93,11 @@ public class Worker {
 
 	public void setIdentityNumber(String identityNumber) {
 		this.identityNumber = identityNumber;
+	}
+
+	public String getDisplayName() {
+		StringJoiner joiner = new StringJoiner(" ");
+		return joiner.add(this.lastName).add(this.middleName).add(this.firstName).toString();
 	}
 	
 }
