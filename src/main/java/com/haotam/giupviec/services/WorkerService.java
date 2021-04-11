@@ -1,9 +1,9 @@
-package com.haotam.giupviec.service;
+package com.haotam.giupviec.services;
 
 
 import javax.transaction.Transactional;
 
-import org.springframework.beans.factory.annotation.Autowired;
+import com.haotam.giupviec.constants.Test;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
@@ -15,11 +15,14 @@ import com.haotam.giupviec.entity.Worker;
 import com.haotam.giupviec.repositories.WorkerRepository;
 
 @Service
-@Transactional
+//@Transactional
 public class WorkerService {
-    
-    @Autowired
-    private WorkerRepository workerRepository;
+
+    private final WorkerRepository workerRepository;
+
+    public WorkerService(WorkerRepository workerRepository) {
+        this.workerRepository = workerRepository;
+    }
 
     public DataTableResponse<Worker> getWorkers(DataTableRequest dataTableRequest) {
         int startPage = dataTableRequest.getStart() / dataTableRequest.getLength();
@@ -31,5 +34,9 @@ public class WorkerService {
         dataTableResponse.setData(responsePage.getContent());
         dataTableResponse.setDraw(dataTableRequest.getDraw());
         return dataTableResponse;
+    }
+
+    public String hello() {
+        return Test.HELLO_SPRING;
     }
 }

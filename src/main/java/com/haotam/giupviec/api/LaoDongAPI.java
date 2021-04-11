@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.haotam.giupviec.api.request.DataTableRequest;
 import com.haotam.giupviec.api.response.DataTableResponse;
 import com.haotam.giupviec.entity.Worker;
-import com.haotam.giupviec.service.WorkerService;
+import com.haotam.giupviec.services.WorkerService;
 
 @RestController
 @RequestMapping("/api")
