@@ -1,18 +1,13 @@
 package com.haotam.giupviec.services;
 
-
-import javax.transaction.Transactional;
-
-import com.haotam.giupviec.constants.Test;
+import com.haotam.giupviec.api.request.DataTableRequest;
+import com.haotam.giupviec.api.response.DataTableResponse;
+import com.haotam.giupviec.model.Worker;
+import com.haotam.giupviec.repositories.WorkerRepository;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
-
-import com.haotam.giupviec.api.request.DataTableRequest;
-import com.haotam.giupviec.api.response.DataTableResponse;
-import com.haotam.giupviec.entity.Worker;
-import com.haotam.giupviec.repositories.WorkerRepository;
 
 @Service
 //@Transactional
@@ -34,9 +29,5 @@ public class WorkerService {
         dataTableResponse.setData(responsePage.getContent());
         dataTableResponse.setDraw(dataTableRequest.getDraw());
         return dataTableResponse;
-    }
-
-    public String hello() {
-        return Test.HELLO_SPRING;
     }
 }

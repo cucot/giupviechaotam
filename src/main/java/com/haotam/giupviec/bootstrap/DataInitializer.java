@@ -1,7 +1,5 @@
 package com.haotam.giupviec.bootstrap;
 
-import com.haotam.giupviec.entity.Customer;
-import com.haotam.giupviec.entity.Worker;
 import com.haotam.giupviec.repositories.CustomerRepository;
 import com.haotam.giupviec.repositories.WorkerRepository;
 import org.springframework.context.ApplicationListener;
@@ -25,6 +23,7 @@ public class DataInitializer implements ApplicationListener<ContextRefreshedEven
     }
 
     private void initData() {
+        /*
         Worker mrsNhung = new Worker();
         mrsNhung.setFirstName("Nhung");
         mrsNhung.setMiddleName("Thị");
@@ -57,5 +56,6 @@ public class DataInitializer implements ApplicationListener<ContextRefreshedEven
 
         customerRepository.save(mrThanh);
         customerRepository.save(mrChau);
+        */
     }
 }
