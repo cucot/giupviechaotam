@@ -6,7 +6,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-@Service
+//@Service
 //@Transactional
 public class EmployeeService {
     private final WorkerRepository workerRepository;
@@ -16,6 +16,6 @@ public class EmployeeService {
     }
 
     public void doSomething() {
-        List<Worker> workers = workerRepository.findAll();
+//        List<Worker> workers = workerRepository.findAll();
     }
 }

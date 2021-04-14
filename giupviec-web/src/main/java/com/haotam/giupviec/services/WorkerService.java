@@ -9,20 +9,20 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
-@Service
+//@Service
 //@Transactional
 public class WorkerService {
 
-    private final WorkerRepository workerRepository;
+//    private final WorkerRepository workerRepository;
 
-    public WorkerService(WorkerRepository workerRepository) {
-        this.workerRepository = workerRepository;
-    }
+//    public WorkerService(WorkerRepository workerRepository) {
+//        this.workerRepository = workerRepository;
+//    }
 
     public DataTableResponse<Worker> getWorkers(DataTableRequest dataTableRequest) {
         int startPage = dataTableRequest.getStart() / dataTableRequest.getLength();
         Pageable pageable = PageRequest.of(startPage, dataTableRequest.getLength());
-        Page<Worker> responsePage = workerRepository.findAll(pageable);
+        Page<Worker> responsePage = null; //workerRepository.findAll(pageable);
         DataTableResponse<Worker> dataTableResponse = new DataTableResponse<>();
         dataTableResponse.setRecordsTotal(responsePage.getTotalElements());
         dataTableResponse.setRecordsFiltered(responsePage.getTotalElements());

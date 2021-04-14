@@ -5,7 +5,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
-@Controller
+//@Controller
 public class WorkerController {
 
     private final WorkerRepository workerRepository;
@@ -16,7 +16,7 @@ public class WorkerController {
 
     @GetMapping("/workers-management")
     public String manageWorkers(Model model) {
-        model.addAttribute("workerList", workerRepository.findAll());
+//        model.addAttribute("workerList", workerRepository.findAll());
         return "pages/worker";
     }
 
