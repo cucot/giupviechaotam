@@ -8,6 +8,6 @@ import org.springframework.context.ApplicationContext;
 public class GiupviechaotamApplication {
 
     public static void main(String[] args) {
-        ApplicationContext appContext = SpringApplication.run(GiupviechaotamApplication.class, args);
+        SpringApplication.run(GiupviechaotamApplication.class, args);
     }
 }
