@@ -1,7 +1,5 @@
 package com.haotam.giupviec.bootstrap;
 
-import com.haotam.giupviec.repositories.CustomerRepository;
-import com.haotam.giupviec.repositories.WorkerRepository;
 import org.springframework.context.ApplicationListener;
 import org.springframework.context.event.ContextRefreshedEvent;
 import org.springframework.stereotype.Component;
@@ -9,13 +7,13 @@ import org.springframework.stereotype.Component;
 //@Component
 public class DataInitializer implements ApplicationListener<ContextRefreshedEvent> {
 
-    private final WorkerRepository workerRepository;
-    private final CustomerRepository customerRepository;
+//    private final WorkerRepository workerRepository;
+//    private final CustomerRepository customerRepository;
 
-    public DataInitializer(WorkerRepository workerRepository, CustomerRepository customerRepository) {
-        this.workerRepository = workerRepository;
-        this.customerRepository = customerRepository;
-    }
+//    public DataInitializer(WorkerRepository workerRepository, CustomerRepository customerRepository) {
+//        this.workerRepository = workerRepository;
+//        this.customerRepository = customerRepository;
+//    }
 
     @Override
     public void onApplicationEvent(ContextRefreshedEvent event) {
