@@ -14,7 +14,7 @@
     <groupId>com.haotam</groupId>
     <artifactId>giupviec</artifactId>
     <packaging>pom</packaging>
-    <version>0.0.1</version>
+    <version>0.0.1-SNAPSHOT</version>
     <name>giupviechaotam</name>
     <description>Dự án xây dựng hệ thống quản lý giúp việc Hảo Tâm</description>
 
@@ -33,7 +33,17 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
+	    <plugin>
+		<groupId>org.apache.maven.plugins</groupId>
+		<artifactId>maven-release-plugin</artifactId>
+		<configuration>
+		    <goal>install</goal>
+		</configuration>
+	    </plugin>
         </plugins>
     </build>
+    <scm>
+	<developerConnection>scm:git:https\://github.com/cucot/giupviechaotam.git</developerConnection>
+    </scm>
 
 </project>
