@@ -12,7 +12,7 @@
     <groupId>com.haotam</groupId>
     <artifactId>giupviec</artifactId>
     <packaging>pom</packaging>
-    <version>0.0.1</version>
+    <version>0.0.2-SNAPSHOT</version>
     <name>giupviechaotam</name>
     <description>Dự án xây dựng hệ thống quản lý giúp việc Hảo Tâm</description>
 
@@ -42,7 +42,7 @@
     </build>
     <scm>
 	<developerConnection>scm:git:https\://github.com/cucot/giupviechaotam.git</developerConnection>
-      <tag>giupviec-0.0.1</tag>
+      <tag>HEAD</tag>
   </scm>
 
 </project>
