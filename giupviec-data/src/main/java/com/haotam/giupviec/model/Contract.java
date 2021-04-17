@@ -2,7 +2,7 @@ package com.haotam.giupviec.model;
 
 import java.time.LocalDate;
 
-public class Contract {
+public class Contract extends BaseEntity{
 
     private LocalDate signingDate;
     private Employee employee;
