@@ -2,21 +2,11 @@ package com.haotam.giupviec.model;
 
 public class Customer extends Person {
 
-    private Long customerId;
-
     private String customerName;
 
     private String phoneNumber;
 
     private String address;
-
-    public Long getCustomerId() {
-        return customerId;
-    }
-
-    public void setCustomerId(Long customerId) {
-        this.customerId = customerId;
-    }
 
     public String getCustomerName() {
         return customerName;
