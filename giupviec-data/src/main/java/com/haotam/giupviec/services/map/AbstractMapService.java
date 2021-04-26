@@ -3,6 +3,7 @@ package com.haotam.giupviec.services.map;
 import com.haotam.giupviec.model.BaseEntity;
 import com.haotam.giupviec.services.CrudService;
 
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
@@ -13,6 +14,12 @@ public abstract class AbstractMapService<T extends BaseEntity, ID extends Long> 
 
     @Override
     public T save(T target) {
+        if (target == null) {
+            throw new RuntimeException("Cannot save null data");
+        }
+        if (target.getId() == null) {
+            target.setId(this.getNextId());
+        }
         map.put(target.getId(), target);
         return target;
     }
@@ -35,5 +42,12 @@ public abstract class AbstractMapService<T extends BaseEntity, ID extends Long> 
     @Override
     public Set<T> findAll() {
         return new HashSet<>(map.values());
+    }
+
+    private Long getNextId() {
+        if (map.isEmpty()) {
+            return 1L;
+        }
+        return Collections.max(map.keySet()) + 1;
     }
 }

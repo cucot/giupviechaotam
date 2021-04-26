@@ -41,7 +41,6 @@ public class DataInitializer implements CommandLineRunner {
 
     private void initWorker() {
         Worker mrsNhung = new Worker();
-        mrsNhung.setId(1L);
         mrsNhung.setFirstName("Nhung");
         mrsNhung.setMiddleName("Thị");
         mrsNhung.setLastName("Nguyễn");
@@ -50,7 +49,6 @@ public class DataInitializer implements CommandLineRunner {
         mrsNhung.setIdentityNumber("437857456843");
 
         Worker mrsLien = new Worker();
-        mrsLien.setId(2L);
         mrsLien.setFirstName("Liên");
         mrsLien.setMiddleName("Hoàng");
         mrsLien.setLastName("Trần");
@@ -65,7 +63,6 @@ public class DataInitializer implements CommandLineRunner {
 
     private void initCustomer() {
         Customer mrThanh = new Customer();
-        mrThanh.setId(1L);
         mrThanh.setFirstName("Thành");
         mrThanh.setMiddleName("Công");
         mrThanh.setLastName("Nguyễn");
@@ -73,7 +70,6 @@ public class DataInitializer implements CommandLineRunner {
         mrThanh.setPhoneNumber("0985755843");
 
         Customer mrChau = new Customer();
-        mrChau.setId(2L);
         mrChau.setFirstName("Châu");
         mrChau.setMiddleName("Quốc");
         mrChau.setLastName("Phan");
@@ -86,7 +82,6 @@ public class DataInitializer implements CommandLineRunner {
 
     private void initBiker() {
         Biker mrTuyen = new Biker();
-        mrTuyen.setId(1L);
         mrTuyen.setFirstName("Tuyền");
         mrTuyen.setMiddleName("Văn");
         mrTuyen.setLastName("Phan");
@@ -96,7 +91,6 @@ public class DataInitializer implements CommandLineRunner {
         mrTuyen.setVehicleNumber("29-H1 23997");
 
         Biker mrKhanh = new Biker();
-        mrKhanh.setId(2L);
         mrKhanh.setFirstName("Khánh");
         mrKhanh.setMiddleName("Quốc");
         mrKhanh.setLastName("Trịnh");
@@ -111,7 +105,6 @@ public class DataInitializer implements CommandLineRunner {
 
     private void initEmployee() {
         Employee mrsLinh = new Employee();
-        mrsLinh.setId(1L);
         mrsLinh.setFirstName("Linh");
         mrsLinh.setMiddleName("Thị");
         mrsLinh.setLastName("Trịnh");
@@ -119,7 +112,6 @@ public class DataInitializer implements CommandLineRunner {
         mrsLinh.setIdentityNumber("185647834");
 
         Employee mrsMai = new Employee();
-        mrsMai.setId(2L);
         mrsMai.setFirstName("Mai");
         mrsMai.setMiddleName("Thị");
         mrsMai.setLastName("Trịnh");
