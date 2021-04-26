@@ -66,13 +66,17 @@ public class DataInitializer implements CommandLineRunner {
     private void initCustomer() {
         Customer mrThanh = new Customer();
         mrThanh.setId(1L);
-        mrThanh.setCustomerName("Nguyễn Công Thành");
+        mrThanh.setFirstName("Thành");
+        mrThanh.setMiddleName("Công");
+        mrThanh.setLastName("Nguyễn");
         mrThanh.setAddress("Nhà 1107, CT4, Mễ Trì Sông Đà");
         mrThanh.setPhoneNumber("0985755843");
 
         Customer mrChau = new Customer();
         mrChau.setId(2L);
-        mrChau.setCustomerName("Phan Quốc Châu");
+        mrChau.setFirstName("Châu");
+        mrChau.setMiddleName("Quốc");
+        mrChau.setLastName("Phan");
         mrChau.setAddress("CT23 Kim Lũ, Đại Từ, Hoàng Mai");
         mrChau.setPhoneNumber("0388475224");
 
