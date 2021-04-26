@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Quản lý tài xế</title>
+</head>
+<body>
+<table>
+  <thead>
+  <th>ID</th>
+  <th>Họ tên</th>
+  <th>CMND</th>
+  <th>Địa chỉ</th>
+  <th>Số điện thoại</th>
+  <th>Biển số xe</th>
+  </thead>
+  <tbody>
+  <tr th:each="biker: ${bikers}">
+    <td th:text="${biker.id}"></td>
+    <td th:text="${biker.fullName}"></td>
+    <td th:text="${biker.identityNumber}"></td>
+    <td th:text="${biker.address}"></td>
+    <td th:text="${biker.phoneNumber}"></td>
+    <td th:text="${biker.vehicleNumber}"></td>
+  </tr>
+  </tbody>
+</table>
+</body>
+</html>

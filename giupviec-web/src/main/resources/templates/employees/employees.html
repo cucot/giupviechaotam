@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Quản lý khách hàng</title>
+</head>
+<body>
+<table>
+  <thead>
+  <th>ID</th>
+  <th>Họ tên</th>
+  <th>CMND</th>
+  <th>Địa chỉ</th>
+  <th>Số điện thoại</th>
+  </thead>
+  <tbody>
+  <tr th:each="employee: ${employees}">
+    <td th:text="${employee.id}"></td>
+    <td th:text="${employee.fullName}"></td>
+    <td th:text="${employee.identityNumber}"></td>
+    <td th:text="${employee.address}"></td>
+    <td th:text="${employee.phoneNumber}"></td>
+  </tr>
+  </tbody>
+</table>
+</body>
+</html>
