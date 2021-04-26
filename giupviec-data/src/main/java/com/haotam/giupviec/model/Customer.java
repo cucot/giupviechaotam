@@ -4,8 +4,6 @@ public class Customer extends Person {
 
     private String customerName;
 
-    private String phoneNumber;
-
     private String address;
 
     public String getCustomerName() {
@@ -16,13 +14,6 @@ public class Customer extends Person {
         this.customerName = customerName;
     }
 
-    public String getPhoneNumber() {
-        return phoneNumber;
-    }
-
-    public void setPhoneNumber(String phoneNumber) {
-        this.phoneNumber = phoneNumber;
-    }
 
     public String getAddress() {
         return address;

@@ -86,16 +86,20 @@ public class DataInitializer implements CommandLineRunner {
         mrTuyen.setFirstName("Tuyền");
         mrTuyen.setMiddleName("Văn");
         mrTuyen.setLastName("Phan");
+        mrTuyen.setIdentityNumber("168594990");
+        mrTuyen.setAddress("141 Phạm Văn Đồng, Cầu Giấy, Hà Nội");
         mrTuyen.setPhoneNumber("0975644532");
         mrTuyen.setVehicleNumber("29-H1 23997");
 
         Biker mrKhanh = new Biker();
         mrKhanh.setId(2L);
-        mrKhanh.setFirstName("Tuyền");
-        mrKhanh.setMiddleName("Văn");
-        mrKhanh.setLastName("Phan");
-        mrKhanh.setPhoneNumber("0975644532");
-        mrKhanh.setVehicleNumber("29-H1 23997");
+        mrKhanh.setFirstName("Khánh");
+        mrKhanh.setMiddleName("Quốc");
+        mrKhanh.setLastName("Trịnh");
+        mrKhanh.setIdentityNumber("156447334");
+        mrKhanh.setAddress("Số 14, Đồng Bát, Mỹ Đình 2, Nam Từ Liêm, Hà Nội");
+        mrKhanh.setPhoneNumber("0915411636");
+        mrKhanh.setVehicleNumber("29-P4 51466");
 
         bikerService.save(mrTuyen);
         bikerService.save(mrKhanh);

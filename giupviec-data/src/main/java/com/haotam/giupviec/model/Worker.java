@@ -8,8 +8,6 @@ public class Worker extends Person {
 
     private String phoneNumber;
 
-    private String address;
-
     private String identityNumber;
 
     public String getPhoneNumber() {
@@ -18,14 +16,6 @@ public class Worker extends Person {
 
     public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
-    }
-
-    public String getAddress() {
-        return address;
-    }
-
-    public void setAddress(String address) {
-        this.address = address;
     }
 
     public String getIdentityNumber() {

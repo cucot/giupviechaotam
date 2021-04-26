@@ -4,8 +4,6 @@ public class Biker extends Person{
 
     private String vehicleNumber;
 
-    private String phoneNumber;
-
     public String getVehicleNumber() {
         return vehicleNumber;
     }
@@ -14,11 +12,4 @@ public class Biker extends Person{
         this.vehicleNumber = vehicleNumber;
     }
 
-    public String getPhoneNumber() {
-        return phoneNumber;
-    }
-
-    public void setPhoneNumber(String phoneNumber) {
-        this.phoneNumber = phoneNumber;
-    }
 }
