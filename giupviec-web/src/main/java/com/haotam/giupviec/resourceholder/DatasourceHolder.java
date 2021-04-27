@@ -7,6 +7,7 @@ public class DatasourceHolder {
     private String password;
     private String javaHome;
     private String systemPath;
+    private String jmsUsername;
 
     public String getUrl() {
         return url;
@@ -48,8 +49,16 @@ public class DatasourceHolder {
         this.systemPath = systemPath;
     }
 
+    public String getJmsUsername() {
+        return jmsUsername;
+    }
+
+    public void setJmsUsername(String jmsUsername) {
+        this.jmsUsername = jmsUsername;
+    }
+
     @Override
     public String toString() {
-        return "url: " + url + "\n username: " + username + "\n password: " + password + "\n java_home: " + javaHome + "\n systemPath: " + systemPath;
+        return "url: " + url + "\n username: " + username + "\n password: " + password + "\n java_home: " + javaHome + "\n systemPath: " + systemPath + "\n jms username: " + jmsUsername;
     }
 }

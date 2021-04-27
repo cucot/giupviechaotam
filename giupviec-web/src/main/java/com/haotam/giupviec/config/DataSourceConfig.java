@@ -6,11 +6,14 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
+import org.springframework.context.annotation.PropertySources;
 import org.springframework.context.support.PropertySourcesPlaceholderConfigurer;
 import org.springframework.core.env.Environment;
 
 @Configuration
-@PropertySource("classpath:datasource.properties")
+@PropertySources({
+        @PropertySource("classpath:datasource.properties"),
+        @PropertySource("classpath:jms.properties")})
 public class DataSourceConfig {
 
     @Autowired
@@ -28,6 +31,9 @@ public class DataSourceConfig {
     @Value("${java_home}")
     private String javaHome;//since our key match system variable echo $JAVA_HOME, system value will be taken
 
+    @Value("${jms.username}")
+    private String jmsUsername;
+
     @Bean
     public DatasourceHolder datasourceHolder() {
         DatasourceHolder holder = new DatasourceHolder();
@@ -36,6 +42,7 @@ public class DataSourceConfig {
         holder.setPassword(password);
         holder.setJavaHome(javaHome);
         holder.setSystemPath(env.getProperty("PATH"));
+        holder.setJmsUsername(jmsUsername);
         return holder;
     }
 
