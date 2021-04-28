@@ -26,8 +26,8 @@ public class DataSourceConfig {
     @Autowired
     Environment env;
 
-    @Value("${haotam.db.url}")
-    private String url;
+    @Value("${haotam.db.url: defaultUrl}")
+    private String url = "default";
 
     @Value("${haotam.db.username}")
     private String username;
