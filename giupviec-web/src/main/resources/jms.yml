@@ -1,0 +1,3 @@
+jms:
+    username: username using yml
+    password: password using yml

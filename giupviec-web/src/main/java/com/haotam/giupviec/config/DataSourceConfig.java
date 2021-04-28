@@ -3,12 +3,15 @@ package com.haotam.giupviec.config;
 import com.haotam.giupviec.resourceholder.DatasourceHolder;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.beans.factory.config.YamlPropertiesFactoryBean;
+import org.springframework.boot.env.YamlPropertySourceLoader;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.context.annotation.PropertySources;
 import org.springframework.context.support.PropertySourcesPlaceholderConfigurer;
 import org.springframework.core.env.Environment;
+import org.springframework.core.io.support.PropertySourceFactory;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -17,7 +20,7 @@ import java.util.Collections;
 @Configuration
 @PropertySources({
         @PropertySource("classpath:datasource.properties"),
-        @PropertySource("classpath:jms.properties")})
+        @PropertySource(value = {"classpath:jms.yml"}, factory = YamlPropertyLoaderFactory.class)})
 public class DataSourceConfig {
 
     @Autowired
@@ -78,4 +81,5 @@ public class DataSourceConfig {
     public static PropertySourcesPlaceholderConfigurer properties() {
         return new PropertySourcesPlaceholderConfigurer();
     }
+
 }
