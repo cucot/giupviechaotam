@@ -34,6 +34,9 @@ public class DataSourceConfig {
     @Value("${jms.username}")
     private String jmsUsername;
 
+    @Value("${haotam.address}")
+    private String haotamAddress;
+
     @Bean
     public DatasourceHolder datasourceHolder() {
         DatasourceHolder holder = new DatasourceHolder();
@@ -43,6 +46,7 @@ public class DataSourceConfig {
         holder.setJavaHome(javaHome);
         holder.setSystemPath(env.getProperty("PATH"));
         holder.setJmsUsername(jmsUsername);
+        holder.setHaotamAddress(haotamAddress);
         return holder;
     }
 

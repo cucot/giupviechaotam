@@ -8,6 +8,7 @@ public class DatasourceHolder {
     private String javaHome;
     private String systemPath;
     private String jmsUsername;
+    private String haotamAddress;
 
     public String getUrl() {
         return url;
@@ -57,8 +58,19 @@ public class DatasourceHolder {
         this.jmsUsername = jmsUsername;
     }
 
+    public String getHaotamAddress() {
+        return haotamAddress;
+    }
+
+    public void setHaotamAddress(String haotamAddress) {
+        this.haotamAddress = haotamAddress;
+    }
+
     @Override
     public String toString() {
-        return "url: " + url + "\n username: " + username + "\n password: " + password + "\n java_home: " + javaHome + "\n systemPath: " + systemPath + "\n jms username: " + jmsUsername;
+        return "url: " + url + "\n username: " + username
+                + "\n password: " + password + "\n java_home: "
+                + javaHome + "\n systemPath: " + systemPath + "\n jms username: " + jmsUsername
+                + "\n address: " + haotamAddress;
     }
 }
