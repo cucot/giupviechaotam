@@ -59,6 +59,9 @@ public class DataSourceConfig {
     @Value("${boolean_false}")
     private boolean booleanFalse;
 
+    @Value("${haotam.fake.phone}")
+    private String haotamFakePhone;
+
     @Bean
     public DatasourceHolder datasourceHolder() {
         DatasourceHolder holder = new DatasourceHolder();
@@ -74,6 +77,7 @@ public class DataSourceConfig {
         System.out.println("Include new line: " + includeNewLine);
         System.out.println("booleanTrue = " + booleanTrue);
         System.out.println("booleanFalse = " + booleanFalse);
+        System.out.println("haotam fake phone: " + haotamFakePhone);
         return holder;
     }
 

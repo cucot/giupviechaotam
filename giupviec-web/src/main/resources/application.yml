@@ -1,4 +1,6 @@
 haotam:
+    fake:
+        phone: original phone
     address: 98A Nguy Nhu Kontum
     tax_number: 598692245
 complex_string: "Complex string, someone's value, should be quoted"
@@ -17,3 +19,16 @@ boolean_true: yes
 another_boolean_true: true
 boolean_false: no
 another_boolean_false: false
+
+---
+spring:
+    profiles: fake
+haotam:
+    fake:
+        phone: phone number in fake profile by yml
+---
+spring:
+    profiles: real
+haotam:
+    fake:
+        phone: phone number in real profile by yml
