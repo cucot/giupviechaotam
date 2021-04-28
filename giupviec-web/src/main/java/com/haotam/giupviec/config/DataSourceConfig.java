@@ -10,6 +10,10 @@ import org.springframework.context.annotation.PropertySources;
 import org.springframework.context.support.PropertySourcesPlaceholderConfigurer;
 import org.springframework.core.env.Environment;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+
 @Configuration
 @PropertySources({
         @PropertySource("classpath:datasource.properties"),
@@ -37,6 +41,21 @@ public class DataSourceConfig {
     @Value("${haotam.address}")
     private String haotamAddress;
 
+    @Value("${name_array}")
+    private String[] complexString;
+
+    @Value("${ignore_new_line}")
+    private String ignoreNewLine;
+
+    @Value("${include_new_line}")
+    private String includeNewLine;
+
+    @Value("${another_boolean_true}")
+    private boolean booleanTrue;
+
+    @Value("${boolean_false}")
+    private boolean booleanFalse;
+
     @Bean
     public DatasourceHolder datasourceHolder() {
         DatasourceHolder holder = new DatasourceHolder();
@@ -47,6 +66,11 @@ public class DataSourceConfig {
         holder.setSystemPath(env.getProperty("PATH"));
         holder.setJmsUsername(jmsUsername);
         holder.setHaotamAddress(haotamAddress);
+        System.out.println("Complex string: " + Arrays.asList(complexString));
+        System.out.println("Ignore new line: " + ignoreNewLine);
+        System.out.println("Include new line: " + includeNewLine);
+        System.out.println("booleanTrue = " + booleanTrue);
+        System.out.println("booleanFalse = " + booleanFalse);
         return holder;
     }
 

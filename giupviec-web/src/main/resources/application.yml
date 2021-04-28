@@ -1,0 +1,19 @@
+haotam:
+    address: 98A Nguy Nhu Kontum
+    tax_number: 598692245
+complex_string: "Complex string, someone's value, should be quoted"
+name_array: Kevin, Debrune, Benzema
+ignore_new_line: >
+    this
+    will
+    be
+    in the same
+    line
+include_new_line: |
+    this will be
+    in multiple
+    lines
+boolean_true: yes
+another_boolean_true: true
+boolean_false: no
+another_boolean_false: false
