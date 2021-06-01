@@ -29,7 +29,7 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain) throws ServletException, IOException {
         // check and see if request header containing bearer jwt token
         String jwtToken = this.getJwtTokenFromRequest(request);
-        if (StringUtils.hasText(jwtToken) && jwtUtils.isTokenValid(toString())) {
+        if (StringUtils.hasText(jwtToken) && jwtUtils.isTokenValid(jwtToken)) {
             // load user detail
             UserDetails userDetails = userDetailsService.loadUserByUsername(jwtUtils.extractUsername(jwtToken));
             if (userDetails != null) {
