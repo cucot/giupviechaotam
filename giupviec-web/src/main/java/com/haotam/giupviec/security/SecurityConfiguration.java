@@ -57,8 +57,8 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 
         //the next 2 lines are used to get access to h2-console (just in development)
         http.cors().and().csrf().disable()
-                .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)
-                .and().headers().frameOptions().disable()
+//                .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)
+                .headers().frameOptions().disable()
                 .and().addFilterBefore(jwtFilter(), UsernamePasswordAuthenticationFilter.class);
     }
 
