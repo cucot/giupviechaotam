@@ -4,6 +4,7 @@ import com.haotam.giupviec.api.request.AuthenticationRequest;
 import com.haotam.giupviec.api.response.AuthenticationResponse;
 import com.haotam.giupviec.util.JwtUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.BadCredentialsException;
@@ -36,14 +37,15 @@ public class AuthenticationController {
         try {
             Authentication authentication = authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(authenticationRequest.getUsername(), authenticationRequest.getPassword()));
             SecurityContextHolder.getContext().setAuthentication(authentication);
+            UserDetails userDetails = (UserDetails) authentication.getPrincipal();
+            String jwtToken = jwtUtils.generateToken(userDetails);
+            AuthenticationResponse response = new AuthenticationResponse();
+            response.setJwt(jwtToken);
+            return ResponseEntity.ok(response);
         } catch (BadCredentialsException bce) {
-            throw new Exception("Invalid credentials");
+            return ResponseEntity.status(HttpStatus.UNAUTHORIZED).build();
         }
-        UserDetails userDetails = userDetailsService.loadUserByUsername(authenticationRequest.getUsername());
-        String jwtToken = jwtUtils.generateToken(userDetails);
-        AuthenticationResponse response = new AuthenticationResponse();
-        response.setJwt(jwtToken);
-        return ResponseEntity.ok(response);
+
     }
 
     @GetMapping("/hello-authenticated")
